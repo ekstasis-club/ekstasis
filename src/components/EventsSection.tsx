@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SubscribeCard from './SubscribeCard';
@@ -26,10 +26,10 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
   const horizontalRef = useRef<HTMLDivElement | null>(null);
   /*const [activeIndex, setActiveIndex] = useState<number>(0);*/
 
-  const handleScroll = (scrollX: number, width: number) => {
+  /*const handleScroll = (scrollX: number, width: number) => {
     const index = Math.round(scrollX / width);
-    /*setActiveIndex(index);*/
-  };
+    setActiveIndex(index);
+  };*/
 
   const TitleWithComingSoon = () => (
     <div className="flex items-center justify-center flex-wrap text-center mt-10 md:mt-24 mb-4">
