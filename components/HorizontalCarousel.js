@@ -6,11 +6,11 @@ import MotionSection from './MotionSection';
 
 const flyers = [
   {
-    image: '/public/images/flyers/18-04-25.webp',
+    image: '/images/flyers/18-04-25.webp',
     url: 'https://ra.co/events/2117889',
   },
   {
-    image: '/public/images/flyers/21-02-25.webp',
+    image: '/images/flyers/21-02-25.webp',
     url: 'https://ra.co/events/2083260',
   },
 ];

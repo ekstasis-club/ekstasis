@@ -44,7 +44,7 @@ export default function EkstasisLanding() {
           <div className="h-full w-[90vw] max-w-5xl overflow-hidden rounded-3xl relative">
             <video
               className="h-full w-full object-cover"
-              src="/public/video.mp4"
+              src="/video.mp4"
               autoPlay
               loop
               muted
