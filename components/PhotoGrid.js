@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const photos = [
-  { src: '/images/18-04-25/photo4.webp' },
-  { src: '/images/21-02-25/photo37.webp' },
-  { src: '/images/18-04-25/photo1.webp' },
-  { src: '/images/21-02-25/photo52.webp' },
+  { src: '/images/photo4.webp' },
+  { src: '/images/photo37.webp' },
+  { src: '/images/photo1.webp' },
+  { src: '/images/photo52.webp' },
 ];
 
 export default function PhotoGrid() {

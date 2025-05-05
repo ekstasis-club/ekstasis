@@ -42,7 +42,7 @@ export default function SubscribeCard() {
   return (
     <motion.div
       style={{
-        backgroundImage: "url('/images/21-02-25/photo39.webp')",
+        backgroundImage: "url('/images/photo39.webp')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
