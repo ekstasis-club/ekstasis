@@ -1,0 +1,33 @@
+{
+  "Navigation": {
+    "events": "EVENTOS",
+    "faq": "FAQ",
+    "archive": "ARCHIVO"
+  },
+  "PageLayout": {
+    "title": "Título de la página",
+    "description": "Esta es la descripción de ejemplo en español."
+  },
+  "Manifest": {
+      "name": "Ekstasis",
+      "short_name": "Ekstasis",
+      "title": "Ekstasis - Techno Raves en Madrid",
+      "description": "EKSTASIS no es solo una fiesta; es un llamado a reconectar con la esencia de la música electrónica y la cultura rave.",
+      "keywords": "rave Madrid, hard techno, techno warehouse, escena underground"
+    },
+      "NotFoundPage": {
+        "title": "Page Not Found",
+        "subtitle": "Sorry, we couldn’t find the page you were looking for.",
+        "button": "Go back home"
+      },    
+    "IndexPage": {
+    "title": "Bienvenido a Ekstasis",
+    "description": "Esta es la <code>página principal</code> del sitio."
+  },
+  "ArchivePage": {
+    "title": "Party Archive",
+    "comingSoon": "Coming soon..."
+  }
+  
+  
+}
