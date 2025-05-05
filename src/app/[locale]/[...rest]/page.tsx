@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 
 export default function CatchAllPage() {
 

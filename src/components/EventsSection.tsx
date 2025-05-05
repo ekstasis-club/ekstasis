@@ -24,11 +24,11 @@ interface EventsProps {
 
 export default function Events({ nextEvent, pastFlyers }: EventsProps) {
   const horizontalRef = useRef<HTMLDivElement | null>(null);
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+  /*const [activeIndex, setActiveIndex] = useState<number>(0);*/
 
   const handleScroll = (scrollX: number, width: number) => {
     const index = Math.round(scrollX / width);
-    setActiveIndex(index);
+    /*setActiveIndex(index);*/
   };
 
   const TitleWithComingSoon = () => (
