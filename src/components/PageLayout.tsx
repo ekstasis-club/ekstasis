@@ -10,10 +10,9 @@ import { useLocale, useTranslations } from 'next-intl';
 
 type Props = {
   children: ReactNode;
-  title?: ReactNode; // ✅ el título es opcional
 };
 
-export default function PageLayout({ children, title }: Props) {
+export default function PageLayout({ children }: Props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();

@@ -15,7 +15,7 @@ export default function EkstasisLanding() {
 
   useEffect(() => {
     const currentWord = words[currentWordIndex];
-    let typingSpeed = isDeleting ? 60 : 120;
+    const typingSpeed = isDeleting ? 60 : 120;
 
     const handleTyping = () => {
       if (!isDeleting && text.length < currentWord.length) {
