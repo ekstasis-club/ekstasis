@@ -102,9 +102,7 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
 
           <div
             ref={horizontalRef}
-            onScroll={(e) =>
-              handleScroll((e.target as HTMLDivElement).scrollLeft, (e.target as HTMLDivElement).offsetWidth)
-            }
+            
             className="flex snap-x snap-mandatory overflow-x-auto gap-6 w-full no-scrollbar pb-4"
           >
             {pastFlyers.map((flyer, index) => (

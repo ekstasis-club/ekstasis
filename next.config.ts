@@ -9,10 +9,16 @@ const withNextIntl = createNextIntlPlugin({
   }
 });
 
-// Agrega la propiedad `images` con el dominio del blob de Vercel
+// Usa `remotePatterns` en lugar de `domains`
 const config: NextConfig = {
   images: {
-    domains: ['vydnyy5ovteb9gb6.public.blob.vercel-storage.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'vydnyy5ovteb9gb6.public.blob.vercel-storage.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 

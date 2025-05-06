@@ -1,12 +1,18 @@
 'use client';
 
 import '../styles/global.css';
+import dynamic from 'next/dynamic';
 import { useEffect, useState, ReactNode } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
-import { FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 import ScrollProgress from './ScrollProgress';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
+
+const FaInstagram = dynamic(() => import('react-icons/fa').then(mod => mod.FaInstagram), { ssr: false });
+const FaTiktok = dynamic(() => import('react-icons/fa').then(mod => mod.FaTiktok), { ssr: false });
+const FaYoutube = dynamic(() => import('react-icons/fa').then(mod => mod.FaYoutube), { ssr: false });
+
 
 type Props = {
   children: ReactNode;
@@ -35,7 +41,9 @@ export default function PageLayout({ children }: Props) {
       {/* HEADER DESKTOP */}
       <div className="absolute top-0 left-0 w-full hidden md:flex items-center justify-between px-4 py-3 z-50">
         <button onClick={() => router.push('/')}>
-          <img src="/logo.svg" alt="Logo" className="h-16" />
+          <div className="relative w-16 h-16">
+            <Image src="/logo.svg" alt="Logo" fill className="object-contain" />
+          </div>
         </button>
         <button
           onClick={() => setMenuOpen(true)}
@@ -49,7 +57,9 @@ export default function PageLayout({ children }: Props) {
       {/* HEADER MÓVIL */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-[90vw] max-w-5xl z-50 flex items-center justify-between px-4 md:hidden">
         <button onClick={() => router.push('/')}>
-          <img src="/logo.svg" alt="Logo" className="h-12" />
+          <div className="relative w-12 h-12">
+            <Image src="/logo.svg" alt="Logo" fill className="object-contain" />
+          </div>
         </button>
         <button
           onClick={() => setMenuOpen(true)}
@@ -132,14 +142,16 @@ export default function PageLayout({ children }: Props) {
                   <FaYoutube />
                 </a>
                 <a href="https://ra.co/promoters/156865" target="_blank" rel="noopener noreferrer" className="text-white text-xl hover:scale-110 transition-transform">
-                  <img src="/ra-logo.png" alt="RA" className="h-4 w-auto mt-[2px]" />
+                  <div className="relative h-4 w-8 mt-[2px]">
+                    <Image src="/ra-logo.png" alt="RA" fill className="object-contain" />
+                  </div>
                 </a>
               </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
-      
+
       {children}
     </>
   );

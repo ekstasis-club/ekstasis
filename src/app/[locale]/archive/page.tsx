@@ -1,5 +1,5 @@
 import { use } from 'react';
-import { Locale, useTranslations } from 'next-intl';
+import { Locale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import PageLayout from '@/components/PageLayout';
 import ArchiveGallery from '@/components/ArchivePage';
@@ -12,10 +12,10 @@ export default function ArchivePage({ params }: Props) {
   const { locale } = use(params);
   setRequestLocale(locale);
 
-  const t = useTranslations('ArchivePage');
+  //const t = useTranslations('ArchivePage');
 
   return (
-    <PageLayout title={t('title')}>
+    <PageLayout>
       <ArchiveGallery />
     </PageLayout>
   );

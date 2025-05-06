@@ -1,5 +1,6 @@
 import { use } from 'react';
-import { Locale, useTranslations } from 'next-intl';
+import { Suspense } from 'react'; 
+import { Locale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import PageLayout from '@/components/PageLayout';
 
@@ -9,7 +10,7 @@ import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/FooterSection';
 import HelpSection from '@/components/HelpSection';
 import Events from '@/components/EventsSection';
-import ScrollHandler from '@/components/ScrollHandler';
+import ClientScrollHandler from '@/components/LandingPage';
 
 type Props = {
   params: Promise<{ locale: Locale }>;
@@ -18,18 +19,8 @@ type Props = {
 export default function IndexPage({ params }: Props) {
   const { locale } = use(params);
 
-  // Establece el idioma para traducciones
   setRequestLocale(locale);
 
-  const t = useTranslations('IndexPage');
-
-  /*const nextEvent = {
-    image: '/images/flyers/18-04-25.webp',
-    url: 'https://ra.co/events/2117889',
-    date: '01-06-2025',
-    location: 'MADRID',
-  };*/
-  
   const nextEvent = null;
 
   const pastFlyers = [
@@ -44,8 +35,10 @@ export default function IndexPage({ params }: Props) {
   ];
 
   return (
-    <PageLayout title={t('title')}>
-      <ScrollHandler />
+    <PageLayout>
+      <Suspense fallback={null}>
+        <ClientScrollHandler />
+      </Suspense>
       <EkstasisLanding />
       <section id="events" className="relative z-20">
         <Events nextEvent={nextEvent} pastFlyers={pastFlyers} />
