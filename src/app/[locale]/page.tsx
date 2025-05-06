@@ -43,11 +43,11 @@ export default function IndexPage({ params }: Props) {
       <section id="events" className="relative z-20">
         <Events nextEvent={nextEvent} pastFlyers={pastFlyers} />
       </section>
+      <PhotoGrid />
       <section id="faq">
         <FAQSection />
       </section>
       <HelpSection />
-      <PhotoGrid />
       <Footer />
     </PageLayout>
   );  
