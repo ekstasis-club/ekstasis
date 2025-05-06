@@ -15,7 +15,10 @@ body {
   font-family: 'Bebas Neue', sans-serif;
 }
 
+html,
+body,
 :root {
+  height: 100%;
   background-color: black;
 }
 

@@ -48,8 +48,8 @@ export default function LocaleLayout({ children, params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className="h-full">
-      <body className={clsx(inter.className, 'min-h-screen flex h-full flex-col bg-black text-white')}>
+    <html lang={locale} className="h-full bg-black">
+      <body className={clsx(inter.className, 'min-h-screen flex h-full flex-col bg-black text-white font-sans')}>
         <NextIntlClientProvider locale={locale}>
           <PageLayout>{children}</PageLayout>
         </NextIntlClientProvider>
