@@ -17,7 +17,7 @@ const photos: Photo[] = [
 ];
 
 export default function PhotoGrid() {
-  const t = useTranslations('PhotoGrid');
+  const t = useTranslations();
 
   return (
     <section className="py-8 bg-black">
@@ -50,7 +50,7 @@ export default function PhotoGrid() {
           href="/archive"
           className="flex-shrink-0 w-[100px] h-[40px] md:w-[140px] md:h-[50px] mt-auto mb-auto bg-white text-black rounded-full font-semibold text-xs uppercase tracking-widest flex items-center justify-center hover:bg-white/90 transition ml-2"
         >
-          {t('viewAll')}
+          {t('PhotoGrid.viewAll')}
         </Link>
       </motion.div>
     </section>
