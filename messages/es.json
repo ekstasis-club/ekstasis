@@ -28,22 +28,26 @@
     "next": "NEW"
   },
   "FAQ": {
-      "faq1": {
-        "question": "¿Cómo puedo comprar entradas?",
-        "answer": "Las entradas se venden a través de nuestro promotor en RA.co. Sigue las redes para saber cuándo salen."
-      },
-      "faq2": {
-        "question": "¿Dónde son los eventos?",
-        "answer": "Anunciamos las ubicaciones secretas unos días antes del evento."
-      },
-      "faq3": {
-        "question": "¿Puedo entrar después de la 1 AM?",
-        "answer": "Sí, pero recomendamos llegar antes para no perderte las mejores vibras."
-      },
-      "faq4": {
-        "question": "¿Qué edad mínima es necesaria?",
-        "answer": "Debes tener mínimo 18 años para asistir."
-      }
+  "faq1": {
+    "question": "¿Cómo puedo conseguir entradas?",
+    "answer": "Las entradas están disponibles a través de Resident Advisor. Síguenos en redes para enterarte cuando salgan a la venta."
+  },
+  "faq2": {
+    "question": "¿Dónde son los eventos?",
+    "answer": "Recibirás la ubicación exacta 12 horas antes del evento al mismo correo con el que compraste la entrada. Si no te llega, contáctanos por Instagram o email."
+  },
+  "faq3": {
+    "question": "¿Qué significa 'BYOB'?",
+    "answer": "Bring Your Own Bottle. Puedes traer tu bebida y mezcla favoritas. Nosotros ponemos los vasos y el hielo."
+  },
+  "faq4": {
+    "question": "¿Qué edad mínima se requiere?",
+    "answer": "Debes tener al menos 18 años para poder asistir."
+  },
+  "faq5": {
+    "question": "¿Hay dresscode?",
+    "answer": "NO. Siéntete libre de venir como quieras."
+  }
   },
   "Landing": {
       "next": "PRÓXIMA",

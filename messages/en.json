@@ -28,22 +28,26 @@
     "next": "NEW"
   },
   "FAQ": {
-      "faq1": {
-        "question": "How can I buy tickets?",
-        "answer": "Tickets are sold through our promoter on RA.co. Follow our social media to know when they are available."
-      },
-      "faq2": {
-        "question": "Where are the events held?",
-        "answer": "We announce secret locations a few days before the event."
-      },
-      "faq3": {
-        "question": "Can I enter after 1 AM?",
-        "answer": "Yes, but we recommend arriving earlier to catch the best vibes."
-      },
-      "faq4": {
-        "question": "What is the minimum age required?",
-        "answer": "You must be at least 18 years old to attend."
-      }
+  "faq1": {
+    "question": "How can I get tickets?",
+    "answer": "Tickets are available through Resident Advisor. Follow us on social media to know when they go live."
+  },
+  "faq2": {
+    "question": "Where are the events?",
+    "answer": "You'll receive the exact location 12 hours before the event via the same email you used to buy your ticket. If you don't receive it, feel free to contact us via Instagram or email."
+  },
+  "faq3": {
+    "question": "What does 'BYOB' mean?",
+    "answer": "Bring Your Own Bottle. You're welcome to bring your favorite drink and mix. We'll provide cups and ice."
+  },
+  "faq4": {
+    "question": "What's the minimum age requirement?",
+    "answer": "You must be at least 18 years old to attend."
+  },
+  "faq5": {
+    "question": "Is there a dress code?",
+    "answer": "NO. Feel free to come as you are."
+  }
   },
   "Landing": {
       "next": "NEXT",
