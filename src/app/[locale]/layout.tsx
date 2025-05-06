@@ -50,12 +50,11 @@ export default function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className="h-full bg-black">
       <body className={clsx(inter.className, 'min-h-screen flex h-full flex-col bg-black text-white font-sans')}>
-      <div className="fixed inset-0 bg-black -z-10" />
+        <div className="fixed inset-0 bg-black -z-10" />
         <NextIntlClientProvider locale={locale}>
           <PageLayout>{children}</PageLayout>
         </NextIntlClientProvider>
-      </div>
       </body>
     </html>
-  );
+  );  
 }
