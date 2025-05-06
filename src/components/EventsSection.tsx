@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import SubscribeCard from './SubscribeCard';
 
 export interface EventData {
@@ -23,13 +24,8 @@ interface EventsProps {
 }
 
 export default function Events({ nextEvent, pastFlyers }: EventsProps) {
+  const t = useTranslations('Events');
   const horizontalRef = useRef<HTMLDivElement | null>(null);
-  /*const [activeIndex, setActiveIndex] = useState<number>(0);*/
-
-  /*const handleScroll = (scrollX: number, width: number) => {
-    const index = Math.round(scrollX / width);
-    setActiveIndex(index);
-  };*/
 
   const TitleWithComingSoon = () => (
     <div className="flex items-center justify-center flex-wrap text-center mt-10 md:mt-24 mb-4">
@@ -40,7 +36,7 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
         transition={{ duration: 0.6 }}
         className="text-xl md:text-2xl font-semibold uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-[#F76BFF] via-white to-[#F76BFF]"
       >
-        NEXT EVENT
+        {t('nextEvent')}
       </motion.h2>
 
       {!nextEvent && (
@@ -50,7 +46,7 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="ml-2 text-[10px] text-white/50 font-normal animate-blink"
         >
-          [COMING SOON]
+          [{t('comingSoon')}]
         </motion.span>
       )}
     </div>
@@ -72,12 +68,12 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
             >
               <Image
                 src={nextEvent.image}
-                alt="Next Event"
+                alt={t('nextEvent')}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
               />
               <div className="absolute top-2 left-2 bg-[#F76BFF] text-black text-xs font-bold px-2 py-1 rounded">
-                NEXT
+                {t('next')}
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 text-white text-sm font-semibold tracking-widest px-4 py-1 rounded">
                 {nextEvent.date} <span className="mx-1 text-white/50">|</span> {nextEvent.location}
@@ -97,12 +93,11 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
             transition={{ duration: 0.6 }}
             className="text-xl font-semibold text-center uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-[#F76BFF] via-white to-[#F76BFF] mb-6"
           >
-            PAST EVENTS
+            {t('pastEvents')}
           </motion.h2>
 
           <div
             ref={horizontalRef}
-            
             className="flex snap-x snap-mandatory overflow-x-auto gap-6 w-full no-scrollbar pb-4"
           >
             {pastFlyers.map((flyer, index) => (
@@ -144,12 +139,12 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
           >
             <Image
               src={nextEvent.image}
-              alt="Next Event"
+              alt={t('nextEvent')}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500 rounded-xl"
             />
             <div className="absolute top-2 left-2 bg-[#F76BFF] text-black text-xs font-bold px-2 py-1 rounded">
-              NEXT
+              {t('next')}
             </div>
             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 text-white text-sm font-semibold tracking-widest px-4 py-1 rounded">
               {nextEvent.date} <span className="mx-1 text-white/50">|</span> {nextEvent.location}
@@ -160,7 +155,7 @@ export default function Events({ nextEvent, pastFlyers }: EventsProps) {
         )}
 
         <motion.h2 className="text-2xl font-semibold text-center uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-[#F76BFF] via-white to-[#F76BFF] mt-12">
-          PAST EVENTS
+          {t('pastEvents')}
         </motion.h2>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-4">

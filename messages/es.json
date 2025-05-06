@@ -4,30 +4,72 @@
     "faq": "FAQ",
     "archive": "ARCHIVO"
   },
-  "PageLayout": {
-    "title": "Título de la página",
-    "description": "Esta es la descripción de ejemplo en español."
-  },
   "Manifest": {
       "name": "Ekstasis",
       "short_name": "Ekstasis",
       "title": "Ekstasis - Techno Raves en Madrid",
       "description": "EKSTASIS no es solo una fiesta; es un llamado a reconectar con la esencia de la música electrónica y la cultura rave.",
       "keywords": "rave Madrid, hard techno, techno warehouse, escena underground"
-    },
-      "NotFoundPage": {
-        "title": "Page Not Found",
+  },
+  "NotFoundPage": {
+        "title": "No encontrada",
         "subtitle": "Sorry, we couldn’t find the page you were looking for.",
         "button": "Go back home"
-      },    
-    "IndexPage": {
-    "title": "Bienvenido a Ekstasis",
-    "description": "Esta es la <code>página principal</code> del sitio."
   },
   "ArchivePage": {
     "title": "Party Archive",
     "comingSoon": "Coming soon..."
+  },
+  "Events": {
+    "nextEvent": "Próximo Evento",
+    "comingSoon": "Próximamente",
+    "pastEvents": "Eventos Pasados",
+    "next": "Próximo"
+  },
+  "FAQ": {
+      "faq1": {
+        "question": "¿Cómo puedo comprar entradas?",
+        "answer": "Las entradas se venden a través de nuestro promotor en RA.co. Sigue las redes para saber cuándo salen."
+      },
+      "faq2": {
+        "question": "¿Dónde son los eventos?",
+        "answer": "Anunciamos las ubicaciones secretas unos días antes del evento."
+      },
+      "faq3": {
+        "question": "¿Puedo entrar después de la 1 AM?",
+        "answer": "Sí, pero recomendamos llegar antes para no perderte las mejores vibras."
+      },
+      "faq4": {
+        "question": "¿Qué edad mínima es necesaria?",
+        "answer": "Debes tener mínimo 18 años para asistir."
+      }
+  },
+  "Landing": {
+      "next": "PRÓXIMO",
+      "warehouse": "ALMACÉN",
+      "rave": "FIESTA",
+      "date": "??.??"
+  },
+  "Help": {
+      "title": {
+        "line1": "Hola, ¿cómo",
+        "line2": "podemos ayudarte"
+      },
+      "description": "En EKS.TA.SIS estamos aquí para ayudarte siempre que podamos. Puedes contactarnos cuando quieras.",
+      "button": "ENVÍANOS UN EMAIL"
+  },
+  "Subscribe": {
+      "titleHTML": "¡MANTENTE AL DÍA! <span class='text-white/50'>ENTRADAS Y NOVEDADES</span>",
+      "placeholders": {
+        "name": "Escribe tu nombre",
+        "email": "Escribe tu correo electrónico",
+        "phone": "Escribe tu teléfono (opcional)"
+      },
+      "button": "Avísame",
+      "success": "¡Nos vemos pronto!",
+      "error": "Hubo un error. Inténtalo de nuevo."
+  },
+  "PhotoGrid": {
+      "viewAll": "Ver Todo"
   }
-  
-  
 }

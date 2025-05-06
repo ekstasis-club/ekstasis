@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 interface Photo {
   src: string;
@@ -16,6 +17,8 @@ const photos: Photo[] = [
 ];
 
 export default function PhotoGrid() {
+  const t = useTranslations('PhotoGrid');
+
   return (
     <section className="py-8 bg-black">
       <motion.div
@@ -31,24 +34,23 @@ export default function PhotoGrid() {
             className="flex-shrink-0 w-[75vw] h-[70vh] md:w-[40vw] md:h-[85vh] max-w-[500px] relative group rounded-2xl overflow-hidden"
           >
             <Image
-  src={photo.src}
-  alt={`Photo ${index + 1}`}
-  fill
-  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-  placeholder="blur"
-  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM"
-/>
-
+              src={photo.src}
+              alt={`Photo ${index + 1}`}
+              fill
+              className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+            />
             <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         ))}
 
-        {/* Último cuadrado: botón "View All" */}
+        {/* Último cuadrado: botón traducido */}
         <Link
           href="/archive"
           className="flex-shrink-0 w-[100px] h-[40px] md:w-[140px] md:h-[50px] mt-auto mb-auto bg-white text-black rounded-full font-semibold text-xs uppercase tracking-widest flex items-center justify-center hover:bg-white/90 transition ml-2"
         >
-          View All
+          {t('viewAll')}
         </Link>
       </motion.div>
     </section>

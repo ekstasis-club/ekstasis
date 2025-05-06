@@ -2,8 +2,10 @@
 
 import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function SubscribeCard() {
+  const t = useTranslations('Subscribe');
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
@@ -52,9 +54,7 @@ export default function SubscribeCard() {
       <div className="absolute inset-0 z-0">
         <div
           className="w-full h-full bg-cover bg-center filter grayscale"
-          style={{
-            backgroundImage: "url('/images/photo39.webp')",
-          }}
+          style={{ backgroundImage: "url('/images/photo39.webp')" }}
         />
         <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
       </div>
@@ -64,7 +64,7 @@ export default function SubscribeCard() {
         <h3
           className="text-4xl md:text-5xl font-extrabold text-white text-center leading-tight w-full"
           dangerouslySetInnerHTML={{
-            __html: `STAY UPDATED! <span class='text-white/50'>TICKET DROP AND NEWS</span>`,
+            __html: t.raw('titleHTML'),
           }}
         />
 
@@ -73,35 +73,35 @@ export default function SubscribeCard() {
             name="name"
             type="text"
             required
-            placeholder="Enter your name"
+            placeholder={t('placeholders.name')}
             className="w-full p-3 rounded-full bg-white/10 text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#F76BFF] transition"
           />
           <input
             name="email"
             type="email"
             required
-            placeholder="Enter your email"
+            placeholder={t('placeholders.email')}
             className="w-full p-3 rounded-full bg-white/10 text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#F76BFF] transition"
           />
           <input
             name="phone"
             type="tel"
-            placeholder="Enter your phone (optional)"
+            placeholder={t('placeholders.phone')}
             className="w-full p-3 rounded-full bg-white/10 text-white placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#F76BFF] transition"
           />
           <button
             type="submit"
             className="w-full px-5 py-2 rounded-full bg-[#F76BFF] hover:bg-[#F76BFF]/80 text-white font-semibold text-xs uppercase tracking-wider transition"
           >
-            Notify Me
+            {t('button')}
           </button>
         </form>
 
         {submitted && (
-          <p className="text-sm text-center text-[#F76BFF]">¡Nos vemos pronto!</p>
+          <p className="text-sm text-center text-[#F76BFF]">{t('success')}</p>
         )}
         {error && (
-          <p className="text-sm text-red-400 text-center">Hubo un error. Inténtalo de nuevo.</p>
+          <p className="text-sm text-red-400 text-center">{t('error')}</p>
         )}
       </div>
     </motion.div>

@@ -3,32 +3,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { User, MessageSquare } from 'lucide-react';
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-const faqs: FAQItem[] = [
-  {
-    question: "¿Cómo puedo comprar entradas?",
-    answer: "Las entradas se venden a través de nuestro promotor en RA.co. Sigue las redes para saber cuándo salen.",
-  },
-  {
-    question: "¿Dónde son los eventos?",
-    answer: "Anunciamos las ubicaciones secretas unos días antes del evento.",
-  },
-  {
-    question: "¿Puedo entrar después de la 1 AM?",
-    answer: "Sí, pero recomendamos llegar antes para no perderte las mejores vibras.",
-  },
-  {
-    question: "¿Qué edad mínima es necesaria?",
-    answer: "Debes tener mínimo 18 años para asistir.",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 export default function FAQSection() {
+  const t = useTranslations('FAQ');
+
   const [text, setText] = useState<string>('');
   const [finished, setFinished] = useState<boolean>(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
@@ -55,9 +34,27 @@ export default function FAQSection() {
     setActiveIndex(index === activeIndex ? null : index);
   };
 
+  const faqs = [
+    {
+      question: t('faq1.question'),
+      answer: t('faq1.answer'),
+    },
+    {
+      question: t('faq2.question'),
+      answer: t('faq2.answer'),
+    },
+    {
+      question: t('faq3.question'),
+      answer: t('faq3.answer'),
+    },
+    {
+      question: t('faq4.question'),
+      answer: t('faq4.answer'),
+    },
+  ];
+
   return (
     <section id="faq" className="py-20 bg-black text-white flex flex-col items-center px-6">
-      {/* Título */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -68,14 +65,12 @@ export default function FAQSection() {
         {text}
       </motion.h2>
 
-      {/* Chat FAQ */}
       <div className="w-full max-w-2xl flex flex-col gap-10">
         {faqs.map((faq, index) => {
           const isActive = activeIndex === index;
 
           return (
             <div key={index} className="space-y-4">
-              {/* Pregunta */}
               <motion.button
                 onClick={() => toggleAnswer(index)}
                 initial={{ opacity: 0, x: -20 }}
@@ -97,7 +92,6 @@ export default function FAQSection() {
                 </div>
               </motion.button>
 
-              {/* Respuesta */}
               <AnimatePresence mode="wait">
                 {isActive && (
                   <motion.div

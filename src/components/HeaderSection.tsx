@@ -1,20 +1,31 @@
 'use client';
 
-import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-
-const words = ["NEXT", "WAREHOUSE", "RAVE", "??.??"];
+import { useEffect, useMemo, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function EkstasisLanding() {
+  const t = useTranslations('Landing');
+
+  const translatedWords = useMemo(
+    () => [
+      t('next'),
+      t('warehouse'),
+      t('rave'),
+      t('date') // Traducido, aunque en este caso sigue siendo "??.??"
+    ],
+    [t]
+  );
+
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   const { scrollY } = useScroll();
   const overlayOpacity = useTransform(scrollY, [0, 400], [0, 0.6]);
 
   useEffect(() => {
-    const currentWord = words[currentWordIndex];
+    const currentWord = translatedWords[currentWordIndex];
     const typingSpeed = isDeleting ? 60 : 120;
 
     const handleTyping = () => {
@@ -27,18 +38,17 @@ export default function EkstasisLanding() {
         return;
       } else if (isDeleting && text.length === 0) {
         setIsDeleting(false);
-        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setCurrentWordIndex((prev) => (prev + 1) % translatedWords.length);
         return;
       }
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
     return () => clearTimeout(timer);
-  }, [text, isDeleting, currentWordIndex]);
+  }, [text, isDeleting, currentWordIndex, translatedWords]);
 
   return (
     <main className="relative bg-black text-white font-sans">
-      {/* SecciÃ³n sticky del video */}
       <section className="h-screen sticky top-0 z-10 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="h-full w-[90vw] max-w-5xl overflow-hidden rounded-3xl relative">
@@ -50,7 +60,6 @@ export default function EkstasisLanding() {
               muted
               playsInline
             />
-            {/* Overlay oscuro que crece con el scroll */}
             <motion.div
               style={{ opacity: overlayOpacity }}
               className="absolute inset-0 bg-black pointer-events-none"
@@ -58,18 +67,17 @@ export default function EkstasisLanding() {
           </div>
         </div>
 
-        {/* Texto centrado sobre el video */}
         <div className="relative z-20 h-full flex items-center justify-center">
-        <h1 className="text-6xl md:text-8xl font-bold uppercase tracking-widest">
-  {words[currentWordIndex] === "??.??" ? (
-    <span className="text-[#F76BFF]">{text}</span>
-  ) : (
-    text
-  )}
-</h1>
-
+          <h1 className="text-6xl md:text-8xl font-bold uppercase tracking-widest">
+            {translatedWords[currentWordIndex] === t('date') ? (
+              <span className="text-[#F76BFF]">{text}</span>
+            ) : (
+              text
+            )}
+          </h1>
         </div>
       </section>
     </main>
   );
 }
+
