@@ -72,6 +72,9 @@ declare const messages: {
       "button": "Notify Me",
       "success": "See you soon!",
       "error": "Something went wrong. Please try again."
+  },
+  "PhotoGrid": { 
+    "viewAll": "VIEW ALL"
   }
 };
 export default messages;

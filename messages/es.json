@@ -70,7 +70,7 @@
       "success": "¡Nos vemos pronto!",
       "error": "Hubo un error. Inténtalo de nuevo."
   },
-  "PhotoGrid": {
-      "viewAll": "Ver Archivo"
+  "PhotoGrid": { 
+    "viewAll": "Ver Archivo"
   }
 }
