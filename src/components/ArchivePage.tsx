@@ -6,8 +6,6 @@ import Image from 'next/image';
 import { IoMdClose, IoMdArrowDropleft, IoMdArrowDropright } from 'react-icons/io';
 import { useTranslations } from 'next-intl';
 
-const parties = ['All', '18-04-2025', '21-02-2025'];
-
 const BLOB_BASE_URL = 'https://vydnyy5ovteb9gb6.public.blob.vercel-storage.com/images';
 
 const photos = [
@@ -22,15 +20,20 @@ const photos = [
 ];
 
 export default function ArchiveGallery() {
-  const [selectedParty, setSelectedParty] = useState('All');
+  const t = useTranslations('ArchivePage');
+
+  const allLabel = t('all');
+  const partyDates = ['18-04-2025', '21-02-2025'];
+  const parties = [allLabel, ...partyDates];
+
+  const [selectedParty, setSelectedParty] = useState<string>(allLabel);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [startX, setStartX] = useState<number | null>(null);
 
-  const t = useTranslations('ArchivePage');
-
-  const filteredPhotos = selectedParty === 'All'
-    ? photos
-    : photos.filter(photo => photo.party === selectedParty);
+  const filteredPhotos =
+    selectedParty === allLabel
+      ? photos
+      : photos.filter((photo) => photo.party === selectedParty);
 
   const openModal = (index: number) => setSelectedIndex(index);
   const closeModal = () => setSelectedIndex(null);
@@ -141,17 +144,16 @@ export default function ArchiveGallery() {
                 <IoMdArrowDropright />
               </button>
             </div>
+
             <a
-  href={filteredPhotos[selectedIndex].src}
-  download
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-4 bg-white/20 text-white px-4 py-2 rounded-md text-sm font-medium backdrop-blur hover:bg-white/30 transition"
->
-  {t('download')}
-</a>
-
-
+              href={filteredPhotos[selectedIndex].src}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 bg-white/20 text-white px-4 py-2 rounded-md text-sm font-medium backdrop-blur hover:bg-white/30 transition"
+            >
+              {t('download')}
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

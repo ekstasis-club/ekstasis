@@ -17,6 +17,7 @@
         "button": "Go back home"
   },
   "ArchivePage": {
+    "all": "All",
     "title": "Archive",
     "comingSoon": "Coming soon...",
     "download": "Download"
