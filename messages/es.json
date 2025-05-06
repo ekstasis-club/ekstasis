@@ -17,14 +17,14 @@
         "button": "Go back home"
   },
   "ArchivePage": {
-    "title": "Party Archive",
-    "comingSoon": "Coming soon..."
+    "title": "Archivo",
+    "comingSoon": "Disponible dentro de poco..."
   },
   "Events": {
-    "nextEvent": "Próximo Evento",
-    "comingSoon": "Próximamente",
-    "pastEvents": "Eventos Pasados",
-    "next": "Próximo"
+    "nextEvent": "PRÓXIMO EVENTO",
+    "comingSoon": "COMING SOON",
+    "pastEvents": "EVENTOS PASADOS",
+    "next": "NEW"
   },
   "FAQ": {
       "faq1": {
@@ -45,31 +45,31 @@
       }
   },
   "Landing": {
-      "next": "PRÓXIMO",
-      "warehouse": "ALMACÉN",
-      "rave": "FIESTA",
+      "next": "PRÓXIMA",
+      "warehouse": "WAREHOUSE",
+      "rave": "RAVE:",
       "date": "??.??"
   },
   "Help": {
       "title": {
-        "line1": "Hola, ¿cómo",
+        "line1": "Hey, cómo",
         "line2": "podemos ayudarte"
       },
       "description": "En EKS.TA.SIS estamos aquí para ayudarte siempre que podamos. Puedes contactarnos cuando quieras.",
       "button": "ENVÍANOS UN EMAIL"
   },
   "Subscribe": {
-      "titleHTML": "¡MANTENTE AL DÍA! <span class='text-white/50'>ENTRADAS Y NOVEDADES</span>",
+      "titleHTML": "STAY UPDATED! <span class='text-white/50'>ENTRADAS Y NOVEDADES</span>",
       "placeholders": {
-        "name": "Escribe tu nombre",
-        "email": "Escribe tu correo electrónico",
-        "phone": "Escribe tu teléfono (opcional)"
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono (opcional)"
       },
       "button": "Avísame",
       "success": "¡Nos vemos pronto!",
       "error": "Hubo un error. Inténtalo de nuevo."
   },
   "PhotoGrid": {
-      "viewAll": "Ver Todo"
+      "viewAll": "Ver Archivo"
   }
 }
