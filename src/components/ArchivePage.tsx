@@ -141,6 +141,17 @@ export default function ArchiveGallery() {
                 <IoMdArrowDropright />
               </button>
             </div>
+            <a
+  href={filteredPhotos[selectedIndex].src}
+  download
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 bg-white/20 text-white px-4 py-2 rounded-md text-sm font-medium backdrop-blur hover:bg-white/30 transition"
+>
+  {t('download')}
+</a>
+
+
           </motion.div>
         )}
       </AnimatePresence>

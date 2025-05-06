@@ -4,14 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Importar fuente desde Google Fonts */
-
-html {
+html, body {
+  height: 100%; /* 🔥 Esto es clave */
   scroll-behavior: smooth;
+  background-color: black;
 }
 
 body {
-  @apply bg-black text-white;
+  @apply text-white;
   font-family: 'Bebas Neue', sans-serif;
 }
 

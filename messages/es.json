@@ -18,7 +18,8 @@
   },
   "ArchivePage": {
     "title": "Archivo",
-    "comingSoon": "Disponible dentro de poco..."
+    "comingSoon": "Disponible dentro de poco...",
+    "download": "Descargar"
   },
   "Events": {
     "nextEvent": "PRÓXIMO EVENTO",

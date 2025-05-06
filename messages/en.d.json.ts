@@ -8,9 +8,9 @@ declare const messages: {
     "archive": "ARCHIVE"
   },
   "Manifest": {
-      "name": "Ekstasis",
-      "short_name": "Ekstasis",
-      "title": "Ekstasis - Techno Raves in Madrid",
+      "name": "EKSTASIS",
+      "short_name": "EKSTASIS",
+      "title": "EKSTASIS - MADRID TECHNO RAVES",
       "description": "EKSTASIS no es solo una fiesta; es un llamado a reconectar con la esencia de la música electrónica y la cultura rave.",
       "keywords": "rave Madrid, hard techno, techno warehouse, escena underground"
   },
@@ -20,14 +20,15 @@ declare const messages: {
         "button": "Go back home"
   },
   "ArchivePage": {
-    "title": "Party Archive",
-    "comingSoon": "Coming soon..."
+    "title": "Archive",
+    "comingSoon": "Coming soon...",
+    "download": "Download"
   },
   "Events": {
-    "nextEvent": "Next Event",
-    "comingSoon": "Coming Soon",
-    "pastEvents": "Past Events",
-    "next": "Next"
+    "nextEvent": "NEXT EVENT",
+    "comingSoon": "COMING SOON",
+    "pastEvents": "PAST EVENTS",
+    "next": "NEW"
   },
   "FAQ": {
       "faq1": {
@@ -64,16 +65,13 @@ declare const messages: {
   "Subscribe": {
       "titleHTML": "STAY UPDATED! <span class='text-white/50'>TICKET DROP AND NEWS</span>",
       "placeholders": {
-        "name": "Enter your name",
-        "email": "Enter your email",
-        "phone": "Enter your phone (optional)"
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone (optional)"
       },
       "button": "Notify Me",
       "success": "See you soon!",
       "error": "Something went wrong. Please try again."
-  },
-  "PhotoGrid": {
-      "viewAll": "View All"
   }
 };
 export default messages;

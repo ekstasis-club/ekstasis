@@ -18,7 +18,8 @@
   },
   "ArchivePage": {
     "title": "Archive",
-    "comingSoon": "Coming soon..."
+    "comingSoon": "Coming soon...",
+    "download": "Download"
   },
   "Events": {
     "nextEvent": "NEXT EVENT",
@@ -68,8 +69,5 @@
       "button": "Notify Me",
       "success": "See you soon!",
       "error": "Something went wrong. Please try again."
-  },
-  "PhotoGrid": {
-      "viewAll": "View All"
   }
 }
