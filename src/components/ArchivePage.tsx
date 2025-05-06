@@ -11,11 +11,11 @@ const parties = ['All', '18-04-2025', '21-02-2025'];
 const BLOB_BASE_URL = 'https://vydnyy5ovteb9gb6.public.blob.vercel-storage.com/images';
 
 const photos = [
-  ...Array.from({ length: 23 }, (_, i) => ({
+  ...Array.from({ length: 89 }, (_, i) => ({
     src: `${BLOB_BASE_URL}/18-04-25/photo${i + 1}.webp`,
     party: '18-04-2025',
   })),
-  ...Array.from({ length: 23 }, (_, i) => ({
+  ...Array.from({ length: 59 }, (_, i) => ({
     src: `${BLOB_BASE_URL}/21-02-25/photo${i + 1}.webp`,
     party: '21-02-2025',
   })),
